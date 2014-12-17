@@ -1,10 +1,15 @@
+#!/bin/sh
+#build the pyhidlib.so
 
-#source=$1 
-#if [ -f $1 ]; then rm $1
-#fi
+if ! [ -d "build" ]; then
+mkdir build
+fi
 
-gcc  -c -fpic  $1.c
+gcc  -c -fpic  src/pyhidlib.c -o build/pyhidlib.o
 
-gcc -shared -lc  -o $1.so  $1.o
+gcc -shared -lc  -o build/pyhidlib.so  build/pyhidlib.o
 
-cp $1.so /opt/lib
+echo if everything went good, find the result in: build/pyhidlib.so
+echo execute:
+echo sudo cp build/pyhidlib.so /opt/lib
+echo to use it comfortable
