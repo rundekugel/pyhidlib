@@ -1,5 +1,4 @@
 #!/usr/bin/python
-#$Id: testpylib.py 583 2014-12-16 12:22:19Z gaul1 $
 
 """Python test script V0.9.
 This shows, how to communicate with a Hid via pyhidlib.so"""
