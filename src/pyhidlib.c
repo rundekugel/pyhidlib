@@ -260,6 +260,7 @@ int closeHid(SHidDev* pHidDev)
     pHidDev->readable = 0;
     close(pHidDev->fd);
     free(pHidDev);
+    pHidDev = 0;
   }
   return 0;
 }
@@ -310,7 +311,7 @@ void compr_s32toChar(__s32* values, int len){
 
 int getLibVersion(void)
 {
-  return 0x0091;
+  return 0x0092;
 }
 
 int setFeature(SHidDev* pHidDev, const char* data, const int len)
