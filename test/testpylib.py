@@ -1,6 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
-"""Python test script V0.9.
+"""Python test script V0.9.1
 This shows, how to communicate with a Hid via pyhidlib.so"""
 
 from ctypes import *
