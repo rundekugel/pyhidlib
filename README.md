@@ -1,6 +1,10 @@
 pyhidlib
 ========
 
+--- deprecated ---
+I recommend usage of pyhidapi instead. See: https://pypi.org/project/hid/
+------------------
+
 Easy access to USB Hid Devices with Python. 
 Running for most Linux-Systems.
 
