@@ -206,6 +206,7 @@ int getHidDev(SHidDev* pHidDev, int vid, int pid, const char* ser, int verbose)
     if ((pHidDev->fd = open(path, O_RDONLY )) >= 0){
       ioctl(pHidDev->fd, HIDIOCGDEVINFO, &pHidDev->device_info);
       if(verbose){
+        pHidDev->device_info.product &= 0xffff; //fix return of wrong pid
         printf("hid.vid=%04x;pid=%04x;ver=%04x;\r\n",
           pHidDev->device_info.vendor,
           pHidDev->device_info.product,
